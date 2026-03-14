@@ -16,314 +16,397 @@
             --border: #e2e8f0;
             --success: #10b981;
         }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{
+            font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto',sans-serif;
+            line-height:1.6;
+            color:var(--text-dark);
+            background:var(--bg-light);
         }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            background: var(--bg-light);
+        header{
+            background:linear-gradient(135deg,var(--primary)0%,var(--primary-dark)100%);
+            color:#fff;
+            padding:4rem 2rem;
+            text-align:center;
+            box-shadow:0 4px 20px rgba(37,99,235,0.2);
         }
-        
-        header {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: white;
-            padding: 4rem 2rem;
-            text-align: center;
-            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.2);
+        header h1{
+            font-size:3rem;
+            font-weight:700;
+            margin-bottom:0.5rem;
         }
-        
-        header h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            animation: fadeInDown 0.8s ease;
+        header .subtitle{
+            font-size:1.3rem;
+            opacity:.95;
+            font-weight:300;
+            margin-bottom:1rem;
         }
-        
-        header .subtitle {
-            font-size: 1.3rem;
-            opacity: 0.95;
-            font-weight: 300;
-            margin-bottom: 1rem;
+        .contact-links{
+            display:flex;
+            gap:1.5rem;
+            justify-content:center;
+            flex-wrap:wrap;
+            margin-top:1.5rem;
         }
-        
-        .contact-links {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 1.5rem;
+        .contact-links a{
+            color:#fff;
+            text-decoration:none;
+            padding:.6rem 1.2rem;
+            background:rgba(255,255,255,.2);
+            border-radius:8px;
+            transition:.3s;
+            backdrop-filter:blur(10px);
         }
-        
-        .contact-links a {
-            color: white;
-            text-decoration: none;
-            padding: 0.6rem 1.2rem;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 8px;
-            transition: all 0.3s;
-            backdrop-filter: blur(10px);
+        .contact-links a:hover{
+            background:rgba(255,255,255,.3);
+            transform:translateY(-2px);
         }
-        
-        .contact-links a:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
+        .container{
+            max-width:1200px;
+            margin:0 auto;
+            padding:3rem 1.5rem;
         }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 3rem 1.5rem;
+        section{
+            background:var(--bg-card);
+            border-radius:16px;
+            padding:2.5rem;
+            margin-bottom:2rem;
+            box-shadow:0 2px 12px rgba(0,0,0,.06);
         }
-        
-        section {
-            background: var(--bg-card);
-            border-radius: 16px;
-            padding: 2.5rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-            animation: fadeInUp 0.6s ease;
+        h2{
+            color:var(--primary);
+            font-size:2rem;
+            margin-bottom:1.5rem;
+            padding-bottom:.8rem;
+            border-bottom:3px solid var(--primary);
+            display:inline-block;
         }
-        
-        h2 {
-            color: var(--primary);
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.8rem;
-            border-bottom: 3px solid var(--primary);
-            display: inline-block;
+        .objectif-box{
+            background:linear-gradient(135deg,#eff6ff 0%,#dbeafe 100%);
+            padding:2rem;
+            border-radius:12px;
+            border-left:5px solid var(--primary);
+            font-size:1.1rem;
+            line-height:1.8;
         }
-        
-        .objectif-box {
-            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
-            padding: 2rem;
-            border-radius: 12px;
-            border-left: 5px solid var(--primary);
-            font-size: 1.1rem;
-            line-height: 1.8;
+        .skills-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:1.5rem;
+            margin-top:1.5rem;
         }
-        
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
+        .skill-card{
+            background:var(--bg-light);
+            padding:1.5rem;
+            border-radius:12px;
+            border-left:4px solid var(--primary);
+            transition:.3s;
         }
-        
-        .skill-card {
-            background: var(--bg-light);
-            padding: 1.5rem;
-            border-radius: 12px;
-            border-left: 4px solid var(--primary);
-            transition: all 0.3s;
+        .skill-card:hover{
+            transform:translateY(-5px);
+            box-shadow:0 8px 20px rgba(37,99,235,.15);
         }
-        
-        .skill-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.15);
+        .skill-card h3{
+            color:var(--primary);
+            margin-bottom:.8rem;
+            font-size:1.2rem;
         }
-        
-        .skill-card h3 {
-            color: var(--primary);
-            margin-bottom: 0.8rem;
-            font-size: 1.2rem;
+        .skill-card ul{list-style:none;padding:0;}
+        .skill-card li{
+            padding:.4rem 0;
+            padding-left:1.5rem;
+            position:relative;
         }
-        
-        .skill-card ul {
-            list-style: none;
-            padding: 0;
+        .skill-card li:before{
+            content:"▸";
+            position:absolute;
+            left:0;
+            color:var(--primary);
+            font-weight:bold;
         }
-        
-        .skill-card li {
-            padding: 0.4rem 0;
-            padding-left: 1.5rem;
-            position: relative;
+        .project-card{
+            background:var(--bg-light);
+            padding:2rem;
+            border-radius:12px;
+            margin-bottom:1.5rem;
+            border-left:5px solid var(--success);
+            transition:.3s;
         }
-        
-        .skill-card li:before {
-            content: "▸";
-            position: absolute;
-            left: 0;
-            color: var(--primary);
-            font-weight: bold;
+        .project-card:hover{
+            transform:translateX(5px);
+            box-shadow:0 8px 24px rgba(0,0,0,.1);
         }
-        
-        .project-card {
-            background: var(--bg-light);
-            padding: 2rem;
-            border-radius: 12px;
-            margin-bottom: 1.5rem;
-            border-left: 5px solid var(--success);
-            transition: all 0.3s;
+        .project-card h3{
+            color:var(--primary);
+            font-size:1.5rem;
+            margin-bottom:1rem;
         }
-        
-        .project-card:hover {
-            transform: translateX(5px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        .project-card .tag{
+            display:inline-block;
+            background:var(--primary);
+            color:#fff;
+            padding:.3rem .8rem;
+            border-radius:20px;
+            font-size:.85rem;
+            margin-right:.5rem;
+            margin-bottom:.5rem;
         }
-        
-        .project-card h3 {
-            color: var(--primary);
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
+        .project-card ul{margin-top:1rem;padding-left:1.5rem;}
+        .project-card li{margin-bottom:.5rem;}
+        .highlight{color:var(--success);font-weight:600;}
+        footer{
+            background:var(--text-dark);
+            color:#fff;
+            text-align:center;
+            padding:2rem;
+            margin-top:3rem;
         }
-        
-        .project-card .tag {
-            display: inline-block;
-            background: var(--primary);
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .project-card ul {
-            margin-top: 1rem;
-            padding-left: 1.5rem;
-        }
-        
-        .project-card li {
-            margin-bottom: 0.5rem;
-        }
-        
-        .highlight {
-            color: var(--success);
-            font-weight: 600;
-        }
-        
-        footer {
-            background: var(--text-dark);
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-        }
-        
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            
-            header .subtitle {
-                font-size: 1.1rem;
-            }
-            
-            section {
-                padding: 1.5rem;
-            }
-            
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
+        @media(max-width:768px){
+            header h1{font-size:2rem;}
+            header .subtitle{font-size:1.1rem;}
+            section{padding:1.5rem;}
+            .skills-grid{grid-template-columns:1fr;}
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Omar Sehbani</h1>
-        <p class="subtitle">BTS SIO SISR - Spécialiste Infrastructures & Cybersécurité</p>
-        <p style="font-size: 1.1rem; margin-top: 1rem;">🎯 Recherche Alternance Septembre 2026</p>
-        <div class="contact-links">
-            <a href="mailto:omar.sehbani.sio@gmail.com">📧 omar.sehbani.sio@gmail.com</a>
-            <a href="https://github.com/lafleche741" target="_blank">💻 GitHub</a>
-            <a href="https://linkedin.com" target="_blank">🔗 LinkedIn</a>
-        </div>
-    </header>
-
-    <div class="container">
-        <section>
-            <h2>🎯 Objectif Professionnel</h2>
-            <div class="objectif-box">
-                Recherche un contrat d'<strong>alternance</strong> en tant qu'<strong>Administrateur Systèmes & Réseaux Junior</strong> ou <strong>Technicien Cybersécurité</strong> pour septembre 2026.
-                <br><br>
-                Passionné par les infrastructures réseau, la virtualisation et la sécurité informatique. Solide expérience pratique en administration systèmes Linux/Windows, déploiement Active Directory et sécurisation d'infrastructures.
-            </div>
-        </section>
-
-        <section>
-            <h2>🛠️ Compétences Techniques</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>🌐 Réseaux</h3>
-                    <ul>
-                        <li>Configuration couches 2/3/4</li>
-                        <li>VLAN 802.1Q</li>
-                        <li>Routage TCP/UDP</li>
-                        <li>Protocols : LDAP, Kerberos, SMB</li>
-                        <li>Firewall Stormshield</li>
-                        <li>Proxmox VE (OVS, VirtIO)</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-card">
-                    <h3>🖥️ Systèmes</h3>
-                    <ul>
-                        <li>Linux Debian (admin serveur)</li>
-                        <li>Windows Server (AD, GPO)</li>
-                        <li>Samba4 Active Directory</li>
-                        <li>SSH, Bash scripting</li>
-                        <li>Virtualisation Proxmox</li>
-                        <li>Gestion postes informatiques</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-card">
-                    <h3>🔒 Cybersécurité</h3>
-                    <ul>
-                        <li>Kali Linux (tests MitM)</li>
-                        <li>Sécurisation infrastructure</li>
-                        <li>Pare-feu Stormshield</li>
-                        <li>HTTPS / certificats SSL</li>
-                        <li>Conformité RGPD</li>
-                        <li>Veille technologique active</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-card">
-                    <h3>🔧 Outils & Support</h3>
-                    <ul>
-                        <li>Git / GitHub</li>
-                        <li>Discord (support 50+ élèves)</li>
-                        <li>Helpdesk niveau 1 au cybercafé</li>
-                        <li>HTML / CSS / SQL</li>
-                        <li>Diagnostic & résolution de pannes</li>
-                        <li>Rédaction de tutoriels et documentation technique</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- le reste de ton portfolio (projets, formation, développement pro, veille, footer, etc.) reste identique à ta dernière version -->
-
+<header>
+    <h1>Omar Sehbani</h1>
+    <p class="subtitle">BTS SIO SISR - Spécialiste Infrastructures &amp; Cybersécurité</p>
+    <p style="font-size:1.1rem;margin-top:1rem;">🎯 Recherche Alternance Septembre 2026</p>
+    <div class="contact-links">
+        <a href="mailto:omar.sehbani.sio@gmail.com">📧 omar.sehbani.sio@gmail.com</a>
+        <a href="https://github.com/lafleche741" target="_blank">💻 GitHub</a>
+        <a href="https://linkedin.com" target="_blank">🔗 LinkedIn</a>
     </div>
+</header>
+
+<div class="container">
+    <section>
+        <h2>🎯 Objectif Professionnel</h2>
+        <div class="objectif-box">
+            Recherche un contrat d’<strong>alternance</strong> en tant qu’<strong>Administrateur Systèmes &amp; Réseaux Junior</strong> ou <strong>Technicien Cybersécurité</strong> pour septembre 2026.
+            <br><br>
+            Passionné par les infrastructures réseau, la virtualisation et la sécurité informatique. Solide expérience pratique en administration systèmes Linux/Windows, déploiement Active Directory et sécurisation d'infrastructures.
+        </div>
+    </section>
+
+    <section>
+        <h2>🛠️ Compétences Techniques</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>🌐 Réseaux</h3>
+                <ul>
+                    <li>Configuration couches 2/3/4</li>
+                    <li>VLAN 802.1Q</li>
+                    <li>Routage TCP/UDP</li>
+                    <li>Protocols : LDAP, Kerberos, SMB</li>
+                    <li>Firewall Stormshield</li>
+                    <li>Proxmox VE (OVS, VirtIO)</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>🖥️ Systèmes</h3>
+                <ul>
+                    <li>Linux Debian (admin serveur)</li>
+                    <li>Windows Server (AD, GPO)</li>
+                    <li>Samba4 Active Directory</li>
+                    <li>SSH</li>
+                    <li>Virtualisation Proxmox</li>
+                    <li>Gestion postes informatiques</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>🔒 Cybersécurité</h3>
+                <ul>
+                    <li>Kali Linux (tests MitM)</li>
+                    <li>Sécurisation infrastructure</li>
+                    <li>Pare-feu Stormshield</li>
+                    <li>HTTPS / certificats SSL</li>
+                    <li>Conformité RGPD</li>
+                    <li>Veille technologique active</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>🔧 Outils &amp; Support</h3>
+                <ul>
+                    <li>Git / GitHub</li>
+                    <li>Discord (support 50+ élèves)</li>
+                    <li>Helpdesk niveau 1 au cybercafé</li>
+                    <li>HTML / CSS / SQL</li>
+                    <li>Diagnostic &amp; résolution de pannes</li>
+                    <li>Rédaction de tutoriels et documentation technique</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>🚀 Projets</h2>
+
+        <div class="project-card">
+            <h3>💼 Système de Facturation Automatique - Cybercafé (TrueCafe)</h3>
+            <span class="tag">Développement</span><span class="tag">Automatisation</span>
+            <p><strong>Création d'un système de facturation automatique sur les postes du cybercafé.</strong></p>
+            <ul>
+                <li>Développement système automatisé de gestion temps/facturation</li>
+                <li>Intégration avec TrueCafe pour suivi sessions clients</li>
+                <li>Interface utilisateur intuitive pour paiements</li>
+                <li><span class="highlight">Réduction 70 % du temps de gestion manuelle</span></li>
+            </ul>
+        </div>
+
+        <div class="project-card">
+            <h3>🆘 Répondre aux incidents et demandes d’assistance du cybercafé</h3>
+            <span class="tag">Support</span><span class="tag">Pédagogie</span>
+            <p><strong>Support aux clients du cybercafé avec création de tutoriels pour les rendre autonomes.</strong></p>
+            <ul>
+                <li>Assistance sur impression, scan, mails, Wi‑Fi, fichiers illisibles</li>
+                <li>Explications pas à pas au lieu de faire à la place du client</li>
+                <li>Tutoriels simples avec captures d’écran et étapes numérotées</li>
+                <li><span class="highlight">Objectif : réduire les incidents récurrents et augmenter l’autonomie</span></li>
+            </ul>
+        </div>
+
+        <div class="project-card">
+            <h3>🌐 Site Web Sécurisé - expertek.com</h3>
+            <span class="tag">Web</span><span class="tag">Sécurité</span>
+            <p><strong>Création de site web sécurisé pour une entreprise de plomberie.</strong></p>
+            <ul>
+                <li>Site vitrine responsive HTML/CSS</li>
+                <li>HTTPS avec certificats SSL</li>
+                <li>Optimisation SEO local</li>
+                <li>Formulaires protégés contre les injections</li>
+                <li><span class="highlight">Augmenter la visibilité d'une entreprise sur internet</span></li>
+            </ul>
+        </div>
+
+        <div class="project-card">
+            <h3>🔐 Attaque MitM &amp; Sécurisation Infrastructure</h3>
+            <span class="tag">Pentest</span><span class="tag">Sécurité</span>
+            <p><strong>Simulation d’attaque Man‑in‑the‑Middle puis sécurisation de l’infrastructure.</strong></p>
+            <ul>
+                <li>Utilisation de Kali Linux pour démontrer l’attaque</li>
+                <li>Analyse des vulnérabilités réseau</li>
+                <li>Généralisation du HTTPS sur les services exposés</li>
+                <li>Formation des utilisateurs aux bonnes pratiques</li>
+                <li><span class="highlight">Infrastructure durcie contre les attaques MitM</span></li>
+            </ul>
+        </div>
+
+        <div class="project-card">
+            <h3>🛡️ Pare-feu Stormshield sur Agence Virtuelle</h3>
+            <span class="tag">Réseau</span><span class="tag">Sécurité</span>
+            <p><strong>Mise en place d’un pare‑feu Stormshield sur une agence virtuelle.</strong></p>
+            <ul>
+                <li>Déploiement virtuel Stormshield SNS sous Proxmox</li>
+                <li>Règles de filtrage avancées</li>
+                <li>VPN site‑à‑site sécurisé</li>
+                <li>Monitoring des logs et alertes</li>
+                <li><span class="highlight">Optimisation de la sécurité et du filtrage au sein d'une entreprise</span></li>
+            </ul>
+        </div>
+
+        <div class="project-card">
+            <h3>🖥️ Gestion Postes Informatiques Entreprise</h3>
+            <span class="tag">Support</span><span class="tag">Systèmes</span>
+            <p><strong>Gestion des postes (mises à jour, diagnostic, résolution de pannes).</strong></p>
+            <ul>
+                <li>Diagnostic matériel et logiciel</li>
+                <li>Déploiement centralisé des mises à jour Windows/Linux</li>
+                <li>Fiches d’auto‑assistance pour les utilisateurs</li>
+                <li><span class="highlight">Continuité de service 100 %, satisfaction clients</span></li>
+            </ul>
+        </div>
+
+        <div class="project-card">
+            <h3>🏢 Contrôleur de Domaine Active Directory Linux</h3>
+            <span class="tag">Samba4</span><span class="tag">AD</span><span class="tag">GPO</span>
+            <p><strong>Mise en place d’un contrôleur de domaine Samba4 sous Debian.</strong></p>
+            <ul>
+                <li>Déploiement Samba4 AD</li>
+                <li>Automatisation de création de comptes via scripts Bash</li>
+                <li>GPO pour la gestion centralisée des postes Windows</li>
+                <li>Portail web de réinitialisation de mots de passe 24/7</li>
+                <li><span class="highlight">Annuaire opérationnel avec gestion centralisée</span></li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>📚 Formation</h2>
+        <div class="project-card">
+            <h3>🎓 BTS SIO Option SISR</h3>
+            <span class="tag">2024‑2026</span>
+            <p><strong>Services Informatiques aux Organisations – Solutions d'Infrastructure, Systèmes et Réseaux.</strong></p>
+            <ul>
+                <li>Gérer le patrimoine informatique</li>
+                <li>Répondre aux incidents et demandes d'assistance</li>
+                <li>Développer la présence en ligne de l'organisation</li>
+                <li>Travailler en mode projet</li>
+                <li>Mettre à disposition un service informatique</li>
+                <li>Organiser son développement professionnel</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>📈 Mon développement professionnel &amp; projets futurs</h2>
+        <p style="margin-bottom:1.5rem;font-size:1.05rem;color:var(--text-light);">
+            Cette partie regroupe les ressources pour suivre mon évolution, comprendre mon profil actuel et découvrir les études et alternances que je vise pour la suite.
+        </p>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>📄 Mon CV à jour</h3>
+                <p>Version détaillée de mon parcours, de mes expériences au cybercafé et de mes projets en BTS SIO SISR.</p>
+                <a href="#" target="_blank" style="display:inline-block;margin-top:.8rem;color:var(--primary);font-weight:600;text-decoration:none;">
+                    🔗 Voir mon CV (lien à venir)
+                </a>
+            </div>
+            <div class="skill-card">
+                <h3>🔗 Mon profil LinkedIn</h3>
+                <p>Profil professionnel avec compétences, recommandations et suivi régulier de mes projets.</p>
+                <a href="#" target="_blank" style="display:inline-block;margin-top:.8rem;color:var(--primary);font-weight:600;text-decoration:none;">
+                    🔗 Accéder à mon LinkedIn (lien à venir)
+                </a>
+            </div>
+            <div class="skill-card">
+                <h3>🎓 Études &amp; alternance visées</h3>
+                <p>Objectif : poursuivre en cybersécurité / administration systèmes &amp; réseaux avec une alternance dès l’année prochaine.</p>
+                <a href="#" target="_blank" style="display:inline-block;margin-top:.8rem;color:var(--primary);font-weight:600;text-decoration:none;">
+                    🔗 Découvrir mon projet professionnel (lien à venir)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>📰 Veille Technologique</h2>
+        <p style="margin-bottom:2rem;font-size:1.1rem;color:var(--text-light);">
+            Suivi quotidien des actualités cybersécurité, systèmes et réseaux pour rester à la pointe et anticiper les vulnérabilités.
+        </p>
+
+        <div class="project-card">
+            <h3>🚨 Windows 11 : KB5077181 provoque des échecs d’installation</h3>
+            <span class="tag">Windows</span><span class="tag">Février 2026</span>
+            <p><strong>Problèmes d’installation et de réseau liés à la mise à jour KB5077181.</strong></p>
+            <ul>
+                <li>Échecs d’installation avec codes d’erreur</li>
+                <li>Perte de connectivité Ethernet/Wi‑Fi</li>
+                <li>Solution : désinstaller la mise à jour en attendant un correctif</li>
+            </ul>
+            <p style="margin-top:1rem;padding:1rem;background:#fff3cd;border-left:4px solid #ffc107;border-radius:8px;">
+                💡 <strong>Impact admin sys :</strong> tester en labo avant déploiement et bloquer la mise à jour en production.
+            </p>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p><strong>Omar Sehbani</strong> - Portfolio BTS SIO SISR 2026</p>
+    <p style="margin-top:.5rem;">Disponible pour alternance dès Septembre 2026 • Île‑de‑France</p>
+    <p style="margin-top:1rem;opacity:.8;">📧 omar.sehbani.sio@gmail.com | 💻 GitHub: lafleche741</p>
+    <p style="margin-top:1rem;font-size:.9rem;opacity:.7;">Dernière mise à jour : Mars 2026</p>
+</footer>
 </body>
 </html>
