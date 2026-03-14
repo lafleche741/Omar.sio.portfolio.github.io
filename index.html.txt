@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omar Sehbani - Portfolio BTS SIO SISR</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --secondary: #64748b;
+            --bg-light: #f8fafc;
+            --bg-card: #ffffff;
+            --text-dark: #0f172a;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+            --success: #10b981;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--bg-light);
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.2);
+        }
+        
+        header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            animation: fadeInDown 0.8s ease;
+        }
+        
+        header .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            font-weight: 300;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+        
+        .contact-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.6rem 1.2rem;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            transition: all 0.3s;
+            backdrop-filter: blur(10px);
+        }
+        
+        .contact-links a:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+        
+        section {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            animation: fadeInUp 0.6s ease;
+        }
+        
+        h2 {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 3px solid var(--primary);
+            display: inline-block;
+        }
+        
+        .objectif-box {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 5px solid var(--primary);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .skill-card {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
+            transition: all 0.3s;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.15);
+        }
+        
+        .skill-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+        }
+        
+        .skill-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .skill-card li {
+            padding: 0.4rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .skill-card li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+        
+        .project-card {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            border-left: 5px solid var(--success);
+            transition: all 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-card h3 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .project-card .tag {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-card ul {
+            margin-top: 1rem;
+            padding-left: 1.5rem;
+        }
+        
+        .project-card li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .highlight {
+            color: var(--success);
+            font-weight: 600;
+        }
+        
+        footer {
+            background: var(--text-dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            header .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            section {
+                padding: 1.5rem;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Omar Sehbani</h1>
+        <p class="subtitle">BTS SIO SISR - Spécialiste Infrastructures & Cybersécurité</p>
+        <p style="font-size: 1.1rem; margin-top: 1rem;">🎯 Recherche Alternance Septembre 2026</p>
+        <div class="contact-links">
+            <a href="mailto:omar.sehbani.sio@gmail.com">📧 omar.sehbani.sio@gmail.com</a>
+            <a href="https://github.com/lafleche741" target="_blank">💻 GitHub</a>
+            <a href="https://linkedin.com" target="_blank">🔗 LinkedIn</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>🎯 Objectif Professionnel</h2>
+            <div class="objectif-box">
+                Recherche un contrat d'<strong>alternance</strong> en tant qu'<strong>Administrateur Systèmes & Réseaux Junior</strong> ou <strong>Technicien Cybersécurité</strong> pour septembre 2026.
+                <br><br>
+                Passionné par les infrastructures réseau, la virtualisation et la sécurité informatique. Solide expérience pratique en administration systèmes Linux/Windows, déploiement Active Directory et sécurisation d'infrastructures.
+            </div>
+        </section>
+
+        <section>
+            <h2>🛠️ Compétences Techniques</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>🌐 Réseaux</h3>
+                    <ul>
+                        <li>Configuration couches 2/3/4</li>
+                        <li>VLAN 802.1Q</li>
+                        <li>Routage TCP/UDP</li>
+                        <li>Protocols : LDAP, Kerberos, SMB</li>
+                        <li>Firewall Stormshield</li>
+                        <li>Proxmox VE (OVS, VirtIO)</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-card">
+                    <h3>🖥️ Systèmes</h3>
+                    <ul>
+                        <li>Linux Debian (admin serveur)</li>
+                        <li>Windows Server (AD, GPO)</li>
+                        <li>Samba4 Active Directory</li>
+                        <li>SSH, Bash scripting</li>
+                        <li>Virtualisation Proxmox</li>
+                        <li>Gestion postes informatiques</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-card">
+                    <h3>🔒 Cybersécurité</h3>
+                    <ul>
+                        <li>Kali Linux (tests MitM)</li>
+                        <li>Sécurisation infrastructure</li>
+                        <li>Pare-feu Stormshield</li>
+                        <li>HTTPS / certificats SSL</li>
+                        <li>Conformité RGPD</li>
+                        <li>Veille technologique active</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-card">
+                    <h3>🔧 Outils & Support</h3>
+                    <ul>
+                        <li>Git / GitHub</li>
+                        <li>Discord (support 50+ élèves)</li>
+                        <li>Helpdesk niveau 1 au cybercafé</li>
+                        <li>HTML / CSS / SQL</li>
+                        <li>Diagnostic & résolution de pannes</li>
+                        <li>Rédaction de tutoriels et documentation technique</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- le reste de ton portfolio (projets, formation, développement pro, veille, footer, etc.) reste identique à ta dernière version -->
+
+    </div>
+</body>
+</html>
