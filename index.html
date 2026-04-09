@@ -31,6 +31,7 @@
             background: var(--bg-light);
         }
         
+        /* Header */
         header {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
             color: white;
@@ -76,12 +77,14 @@
             transform: translateY(-2px);
         }
         
+        /* Container */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 3rem 1.5rem;
         }
         
+        /* Section */
         section {
             background: var(--bg-card);
             border-radius: 16px;
@@ -100,6 +103,7 @@
             display: inline-block;
         }
         
+        /* Objectif */
         .objectif-box {
             background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
             padding: 2rem;
@@ -109,6 +113,7 @@
             line-height: 1.8;
         }
         
+        /* Compétences Grid */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -154,6 +159,7 @@
             font-weight: bold;
         }
         
+        /* Projet Cards */
         .project-card {
             background: var(--bg-light);
             padding: 2rem;
@@ -235,6 +241,7 @@
             background: var(--primary-dark);
         }
         
+        /* Footer */
         footer {
             background: var(--text-dark);
             color: white;
@@ -243,6 +250,7 @@
             margin-top: 3rem;
         }
         
+        /* Animations */
         @keyframes fadeInDown {
             from {
                 opacity: 0;
@@ -256,8 +264,8 @@
         
         @keyframes fadeInUp {
             from {
-                opacity: 0;
-                transform: translateY(30px);
+            opacity: 0;
+            transform: translateY(30px);
             }
             to {
                 opacity: 1;
@@ -265,6 +273,7 @@
             }
         }
         
+        /* Responsive */
         @media (max-width: 768px) {
             header h1 {
                 font-size: 2rem;
@@ -351,16 +360,16 @@
             <h2>🚀 Projets</h2>
             
             <div class="project-card">
-                <h3>💼 Système de Facturation Automatique - Cybercafé (TrueCafe)</h3>
+                <h3>💼 Système de Facturation Automatique - Cybercafé (iCafe Manager)</h3>
                 <span class="tag">Développement</span>
                 <span class="tag">Automatisation</span>
                 <p><strong>Création d'un système de facturation automatique sur les postes du cybercafé.</strong></p>
-                <a href="https://docs.google.com/document/d/1D2g9K_dxBuvVCZc9-gAn9TycYSEgV5ffHHYuh7xjSB0/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="proof-link">
+                <a href="https://docs.google.com/document/d/19vNsRp7nQUUCne6NBJY3OjyQkC_9d88DpcW4kG2w0og/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="proof-link">
                     📄 Voir la preuve du projet
                 </a>
                 <ul>
                     <li>Développement système automatisé de gestion temps/facturation</li>
-                    <li>Intégration avec TrueCafe pour suivi sessions clients</li>
+                    <li>Intégration avec iCafe Manager pour suivi sessions clients</li>
                     <li>Interface utilisateur intuitive pour paiements</li>
                     <li><span class="highlight">Résultat : Réduction 70% temps gestion manuelle</span></li>
                 </ul>
@@ -378,8 +387,8 @@
                 <span class="tag">Support</span>
                 <span class="tag">Pédagogie</span>
                 <p><strong>Prise en charge des incidents clients et création de tutoriels pour les rendre plus autonomes.</strong></p>
-                <a href="https://drive.google.com/drive/folders/1Pr7fJuhQwXetyFGC6N25bXksDCGxRZTV?usp=sharing" target="_blank" rel="noopener noreferrer" class="proof-link">
-                    📁 Voir la preuve du projet
+                <a href="https://drive.google.com/drive/folders/1Pr7fJuhQwXetyFGC6N25bXksDCGxRZTV?usp=drive_link" target="_blank" rel="noopener noreferrer" class="proof-link">
+                    📄 Voir la preuve du projet
                 </a>
                 <ul>
                     <li>Accueil et écoute des clients en difficulté (postes du cybercafé ou PC personnel)</li>
@@ -402,7 +411,10 @@
                 <span class="tag">Sécurité</span>
                 <p><strong>Création de site web sécurisé pour le client expertek.com (plomberie)</strong></p>
                 <a href="https://expertek.fr" target="_blank" rel="noopener noreferrer" class="proof-link">
-                    🌍 Voir le site en ligne
+                    🌐 Voir le site en ligne
+                </a>
+                <a href="https://drive.google.com/file/d/124xYEsGWz6As0EcZMvYD47yXin1x72dY/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="proof-link">
+                    📄 Voir la preuve du projet
                 </a>
                 <ul>
                     <li>Développement site vitrine responsive HTML/CSS</li>
@@ -461,28 +473,6 @@
             </div>
 
             <div class="project-card">
-                <h3>🖥️ Remplacement d’un parc informatique complet</h3>
-                <span class="tag">Support</span>
-                <span class="tag">Systèmes</span>
-                <p><strong>Remplacer un parc informatique tout en maintenant l’activité professionnelle du cybercafé.</strong></p>
-                <a href="https://docs.google.com/document/d/1D2g9K_dxBuvVCZc9-gAn9TycYSEgV5ffHHYuh7xjSB0/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="proof-link">
-                    📄 Voir la preuve du projet
-                </a>
-                <ul>
-                    <li>Planification du remplacement des postes pour éviter l’interruption de service</li>
-                    <li>Mise en place progressive des nouvelles machines et migration des données clients</li>
-                    <li>Tests systématiques avant mise à disposition au public</li>
-                    <li><span class="highlight">Activité du cybercafé maintenue pendant toute l’opération</span></li>
-                </ul>
-                <p><strong>Compétences mises en œuvre :</strong></p>
-                <ul>
-                    <li>1 – Gérer le patrimoine informatique</li>
-                    <li>4 – Travailler en mode projet</li>
-                    <li>6 – Organiser son développement professionnel</li>
-                </ul>
-            </div>
-
-            <div class="project-card">
                 <h3>🏢 Contrôleur de Domaine Active Directory Linux</h3>
                 <span class="tag">Samba4</span>
                 <span class="tag">AD</span>
@@ -490,6 +480,9 @@
                 <p><strong>Mise en place contrôleur de domaine Active Directory sous Linux avec gestion GPO pour postes Windows</strong></p>
                 <a href="https://docs.google.com/document/d/1tvnmK2k_ew2ffx2yQ-Eevi3RQvIT7bZ6AlXia2qruBo/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="proof-link">
                     📄 Voir la preuve du projet
+                </a>
+                <a href="https://drive.google.com/file/d/1GtuVQlB0ATsXnGVE1PxHzkcQnQuyOdWV/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="proof-link">
+                    📄 Voir la deuxième preuve du projet
                 </a>
                 <ul>
                     <li>Déploiement Samba4 AD sous Debian</li>
@@ -502,7 +495,7 @@
                 <ul>
                     <li>1 – Gérer le patrimoine informatique</li>
                     <li>2 – Répondre aux incidents et aux demandes d’assistance et d’évolution</li>
-                    <li>3 – Développer la présence en ligne de l’organisation</li>
+                    <li>5 – Mettre à disposition des utilisateurs un service informatique</li>
                 </ul>
             </div>
         </section>
@@ -548,11 +541,69 @@
                     <h3>🎓 Études & entreprises visées</h3>
                     <p>Objectif : poursuivre en cybersécurité / administration systèmes & réseaux, en licence pro ou école d’ingénieur, de préférence en alternance.</p>
                     <ul>
-                        <li>École visée : <strong>EFREI Paris</strong>.</li>
-                        <li>Licence professionnelle <strong>Infrastructures et Réseaux</strong>.</li>
-                        <li>Entreprises/infrastructures cibles : <strong>Groupe Vitality</strong>, <strong>Amazon</strong>, <strong>Google</strong>, <strong>Orange</strong>, <strong>Free</strong>.</li>
+                        <li>École visée : <strong>EFREI Paris</strong> (réseaux, cybersécurité).</li>
+                        <li>Licence professionnelle <strong>Infrastructures et Réseaux</strong>, en alternance ou en formation initiale.</li>
+                        <li>Entreprises/infrastructures cibles : <strong>Groupe Vitality</strong>, <strong>Amazon</strong>, <strong>Google</strong>, pôles réseaux d’<strong>Orange</strong> et de <strong>Free</strong>.</li>
                     </ul>
                 </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>📰 Veille Technologique</h2>
+            <p style="margin-bottom: 2rem; font-size: 1.1rem; color: var(--text-light);">
+                Suivi quotidien des actualités cybersécurité, systèmes et réseaux pour rester à la pointe des technologies et anticiper les vulnérabilités.
+            </p>
+            
+            <div class="project-card" style="border-left: 5px solid var(--alert-color);">
+                <h3 style="color: var(--alert-color);">🔔 Google Alerts - Veille Automatisée</h3>
+                <p>Suivi automatique actualités cybersécurité, réseaux et systèmes :</p>
+                <ul style="padding-left: 1.5rem; margin: 1rem 0;">
+                    <li>Stormshield vulnérabilités</li>
+                    <li>Debian security advisories</li>
+                    <li>Windows Server patches</li>
+                </ul>
+                <div style="text-align: center; margin: 2rem 0;">
+                    <a href="https://www.google.com/alerts" target="_blank" rel="noopener noreferrer" class="alert-btn">
+                        👁️ Mes Google Alerts Live
+                    </a>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);">
+                        Ouvre directement ma page Google Alerts
+                    </p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>📂 Synthèse de ma veille technologique</h3>
+                <p>Quelques ressources principales que j’utilise et que j’ai analysées dans ma veille :</p>
+                <ul>
+                    <li>
+                        📄 <strong>Document de veille personnel BTS SIO</strong> – 
+                        <a href="https://docs.google.com/document/d/16ggat2qoMKN9fluVx3FK5Oxvi6pVLwPZQbyWdpslOM8/edit?usp=sharing" target="_blank" rel="noopener noreferrer" style="color: var(--primary);">
+                            Consulter ma veille technologique
+                        </a>
+                    </li>
+                    <li>
+                        🔐 <strong>CNIL – Comprendre les grands principes de la cryptologie et du chiffrement</strong> – 
+                        <a href="https://www.cnil.fr/fr/cybersecurite/comprendre-les-grands-principes-de-la-cryptologie-et-du-chiffrement" target="_blank" rel="noopener noreferrer" style="color: var(--primary);">
+                            Lire l’article
+                        </a>
+                    </li>
+                    <li>
+                        🐧 <strong>Ubuntu – Installer et configurer Samba</strong> – 
+                        <a href="https://ubuntu.com/tutorials/install-and-configure-samba#1-overview" target="_blank" rel="noopener noreferrer" style="color: var(--primary);">
+                            Voir le tutoriel
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <h3>📊 Tableau de synthèse</h3>
+                <p>Accès direct à mon tableau de synthèse de veille :</p>
+                <a href="https://drive.google.com/file/d/17FHvBPnjPYGl-rxiaQNHQnXb712mZ_Jm/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="proof-link">
+                    📄 Voir le tableau de synthèse
+                </a>
             </div>
         </section>
     </div>
@@ -561,6 +612,7 @@
         <p><strong>Omar Sehbani</strong> - Portfolio BTS SIO SISR 2026</p>
         <p style="margin-top: 0.5rem;">Disponible pour alternance dès Septembre 2026 • Île-de-France</p>
         <p style="margin-top: 1rem; opacity: 0.8;">📧 [omar.sehbani.sio@gmail.com](mailto:omar.sehbani.sio@gmail.com) | 💻 GitHub: lafleche741</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.7;">Dernière mise à jour veille techno : Mars 2026</p>
     </footer>
 </body>
 </html>
